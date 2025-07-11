@@ -10,8 +10,7 @@ const markdownConverter = (text) => {
     const html = converter.makeHtml(text);
     return html;
 }
-
-//apagar depois chave key: AIzaSyCRV_gPEKj1ZYvZFRyU3tMcIQODi6sRTWI
+//criação de key explicada no REDEME.md
 const perguntarAI = async (apiKey, game, question) => {
   const model = "gemini-2.5-flash";
   const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;

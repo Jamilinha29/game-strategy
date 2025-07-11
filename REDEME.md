@@ -109,7 +109,8 @@ A partir disso, o HTML é impactado visualmente.
 - Interface
 - JSON: Javascript object Notation
 
-- Usada pelo gerado gemini docs onde usaremos a url do rest e modificaremos para usa a chave key gerada atraves de um projeto no google cloud console
+- Usada pelo gerado gemini docs onde usaremos a url do rest so a primeira linha e modificaremos para usa a chave key gerada atraves de um projeto criado no google cloud console.
+- obs.: pode ser gerada sem o cloud mas é melhor ter seu proprio projeto pra estudods
 
 # CDN
 - Content

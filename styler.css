@@ -1,0 +1,161 @@
+*{
+    margin: 0; /*Margem do elemento*/
+    padding: 0; /*Preenchimento do elemento*/
+    box-sizing: border-box; /*Soma do tamanho da caixa, largura e altura de borda a borda*/
+}
+body{
+ background-image: url("img/fundo.jpg");
+ background-repeat: no-repeat; /*valor do tipo keyword*/
+ background-size: 100% auto; /*width height*/
+ background-position: top center;/*Vertical hotizontal*/
+ background-color: #121214;/*Cor de fundo(hex: RR, GG, BB)*/
+    color: rgb(245, 245, 245); /*Cor do texto*/
+}
+
+body*, :root{ /*:root = tudo dentro do html e tem largura de 10 onde com o html tem peso de 1*/
+    font-family: 'Inter'; /*Fonte do texto*/
+    line-height: 168%; /*Altura da linha*/
+}
+
+header{
+    padding-top: 32px; /*Espaçamento interno do topo*/
+    text-align: center; /*Alinhamento do texto*/
+}
+
+header img{
+    /*padding-top: 10rem; /*Espaçamento interno do topo da imagem e fica um espaço para o centro*/
+    width: 15rem; /*Largura da imagem, 1rem equivalerá a 16px*/
+}
+
+main{
+    max-width: 36rem; /*Largura máxima do elemento*/
+   width: 90%;
+   margin: 3rem auto; /*Margem do elemento, 3rem de margem superior e inferior, auto para centralizar horizontalmente*/
+   /* border: 1px solid red; Removida a borda vermelha */
+}   
+
+section{
+    background-image:  linear-gradient(90deg, #ffa600 0%, #ae600c 50%, #ff0202 100%);
+    border-radius: 0.625rem; /*Arredondamento dos cantos do elemento, 0.625rem equivale a 10px*/
+    padding-top: 4px; /*Espaçamento interno do topo*/
+}
+
+section > div{
+    padding: 2rem; /*Espaçamento interno do elemento*/
+    padding-top: 1.5rem;
+    border-radius: 0.5rem; /*Arredondamento dos cantos do elemento*/
+    background-color: #692110;
+}
+
+section h2{
+    letter-spacing: -0.47px;
+}
+
+section p{
+   letter-spacing: -0.18px; /*Espaçamento entre letras*/
+   color: rgb(199, 195, 195); /*Cor do texto, #a1a1aa é um tom de cinza claro*/
+}
+
+/* Animações */
+main section{
+    opacity: 1;
+    transform: translateY(2rem);
+
+    animation-name: My;
+    animation-duration: 700ms; /*Duração da animação, 700ms equivale a 0.7 segundos*/
+    animation-fill-mode: forwards; /*Mantém o estado final da animação após a conclusão*/
+}
+
+
+@keyframes My { /*Animação personalizada chamada "My"*/
+    100%{
+        opacity: 1; /*Opacidade final da animação*/
+        transform: translateY(0); /*Transformação final da animação, movendo o elemento para a posição original no eixo Y*/
+    }
+    
+}
+
+form{
+    display: flex;
+    gap: 0.85rem; /*Espaçamento entre os elementos do formulário*/
+    flex-wrap: wrap; /*Permite que os elementos do formulário se ajustem em várias linhas, se necessário*/
+    margin: 1.25rem 0; /*Margem do formulário, 1.25rem de margem superior e inferior*/
+}
+
+
+
+input, select{
+    all: unset; /*Remove todos os estilos padrão do elemento, como bordas, preenchimento, etc.*/
+    border: 2px solid #8f2f03; /*Borda do elemento, 2px de largura, cor #9147ff*/
+    border-radius: 0.5rem;
+    padding: 0.675rem;
+    font-size: 1rem;
+    background-color: #080808; /*Cor de fundo do elemento, #121214 é um tom de cinza escuro*/
+    color: #c4c4c9; /* Texto escuro */
+    cursor: pointer;
+    
+}
+
+input{
+    flex: 1; /*Permite que o campo de entrada ocupe todo o espaço disponível*/
+}
+
+
+button{
+    width: 100%; /*Largura do botão, 100% do espaço disponível*/
+    border: 0; /*Remove a borda do botão*/
+    background-image: linear-gradient(90deg, #6f4b08 0%, #ae600cbb 50%, #ff0202d0 100%);
+    padding: 0.675rem; /*Preenchimento do botão, 0.675rem de preenchimento*/
+    border-radius: 0.5rem; /*Arredondamento dos cantos do botão*/
+    font-weight: bold; /*Negrito do texto do botão*/
+    text-transform: uppercase; /*Transforma o texto do botão em maiúsculas*/
+    letter-spacing: 0.12px; /*Espaçamento entre letras do texto do botão*/
+
+    transition: all 0.3s;
+}
+
+
+button:hover{
+    cursor: pointer; /*Muda o cursor para indicar que o botão é clicável*/
+    transform: translateY(-2px); /*Move o botão 2 pixels para cima quando o mouse passa sobre ele*/
+    box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+button:disabled {
+    transition: initial; /*Remove a transição quando o botão é clicado*/
+    transform: initial; /*Restaura a posição original do botão quando clicado*/
+    box-shadow: initial;
+    cursor: not-allowed; /*Muda o cursor para indicar que o botão não está mais disponível*/
+    color: black;
+    opacity: 0.5; /* Torna o botão opaco quando desabilitado */
+}
+
+#aiResponse{
+    background: #121214;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border-left: 4px solid #f17109; /*Borda esquerda do elemento, 4px de largura, cor #9147ff*/
+}
+
+#aiResponse ul{
+    padding-left: 1.5rem; /*Preenchimento à esquerda da lista, 1.5rem*/
+
+}
+
+#aiResponse p {
+    color: rgb(201, 201, 201); /*Cor do texto do parágrafo, branco*/
+}
+
+.loading{
+    animation: pulse 1s infinite; /*Animação de pulso contínua, duração de 1 segundo, repetição infinita*/
+}
+
+.hidden{
+    display: none; /*Esconde o elemento, não ocupa espaço no layout*/
+}
+
+@keyframes pulse {
+   50%{
+    opacity: 0.5; /*Opacidade reduzida para 50% no meio da animação*/
+   }
+}

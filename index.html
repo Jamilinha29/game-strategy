@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!-- Linguagem do tipo de documento -->
+<html lang="pt-br"> <!-- Linguagem de leitura escolhida -->
+<head> <!-- Aparece, oculta e interpreta caracteres especiais, viewport = parte branca total da tela -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Identificador de adaptação de largura de cada dispositivo usado -->
+  <title>Document</title>
+  <link rel="stylesheet" href="styler.css">
+</head>
+<body> <!-- Aparece na página branca -->
+  <header>
+    <img src="img/logo1.png" alt="Logo Esport nlw">
+  </header>
+  <main> <!-- Conteúdo exclusivo do documento -->
+    <section> <!-- Seção da página -->
+      <div>
+        <h2>Assistente de Meta</h2>
+        <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+
+        <form id="form"> <!-- corrigido "if" para "id" -->
+          <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini" required>
+
+          <select id="gameSelect">
+            <option value="">Selecione um jogo</option>
+            <option value="Valorante">Valorante</option>
+            <option value="LOL">League of Legends</option>
+            <option value="Genshin Impact">Genshin Impact</option>
+            <option value="CS:GO">CS:GO</option>
+          </select>
+          <input id="questionInput" type="text" placeholder="Ex.: Melhor Build para ADC..." required>
+          <button id="askButton" type="submit">Pesquisar</button>
+        </form>
+
+        <div id="aiResponse" class ="hidden"> <!-- Adicionado a classe "hidden" para esconder inicialmente -->
+          <div class="response-content"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="  https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script src="scrypt.js"></script>
+</body>
+</html>
